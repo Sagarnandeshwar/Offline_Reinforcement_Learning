@@ -11,10 +11,14 @@ Offline RL is particularly beneficial in situations where online interactions wi
 
 The "CartPole" environment is another classic reinforcement learning environment provided by the OpenAI Gym toolkit. It simulates a simple physics problem where an inverted pendulum (pole) is attached to a moving cart. The goal of the agent is to balance the pole on the cart by applying appropriate forces to the cart. 
 
+![env](https://github.com/Sagarnandeshwar/Offline_Reinforcement_Learning/blob/main/images/cart_pole.png)
+
 ## Dataset 
 For this assignment we have collected data from three resources. 
 
-- **Expert Agent:** For Expert Agent we Q-learning algorithm with alpha = 1/8. In Q-learning , the Q-function estimates the expected cumulative reward an agent can achieve by taking a specific action in a given state and then following the optimal policy from that point onward. 
+- **Expert Agent:** For Expert Agent we Q-learning algorithm with alpha = 1/8. In Q-learning , the Q-function estimates the expected cumulative reward an agent can achieve by taking a specific action in a given state and then following the optimal policy from that point onward.
+
+  ![ql](https://github.com/Sagarnandeshwar/Offline_Reinforcement_Learning/blob/main/images/ql.png)
 
 - **Random Selection:** Here we selected random action using binomial distribution 
 
@@ -28,11 +32,15 @@ The goal of imitation learning is to create a model that can replicate the exper
 
 Logistic regression is a supervised linear classification learning algorithm that is used to predict the probability that an instance belongs to a particular class, given its features (input variables). In context of reinforcement learning (RL), logistic regression can be used as a function approximator to estimate action probabilities in certain scenarios; The logistic regression model maps the observed states to the probabilities of taking each possible action. In imitation learning, the dataset consists of pairs of states and corresponding expert actions, which are used to train the logistic regression model. 
 
+![lr](https://github.com/Sagarnandeshwar/Offline_Reinforcement_Learning/blob/main/images/lr.png)
+
 ## Fitted q learning  
 
 Fitted Q-learning improves the efficiency of the Q-learning algorithm by fitting a function approximator to estimate the Q-values of state-action pairs, rather than maintaining a tabular representation of the Q-values. the core idea is to fit a Q-function approximator to a dataset of experiences (state-action-next state-reward tuples) collected from the environment. This enables Q-learning to scale better to high-dimensional and continuous state spaces. 
 
- I have set hyperparameter K to 5. I observed that the Q-function values drift very quickly when k is more than 5 
+![fqr](https://github.com/Sagarnandeshwar/Offline_Reinforcement_Learning/blob/main/images/fql.png)
+
+I have set hyperparameter K to 5. I observed that the Q-function values drift very quickly when k is more than 5 
 
 ## Performance  
 
